@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    tools:context="com.example.myapplication.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ccc"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/cardview_dark_background"
+            app:cardCornerRadius="1dp">
+
+            <TextView
+                android:id="@+id/instructions_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:linksClickable="true"
+                android:text="@string/instructions"
+                android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardCornerRadius="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="onClickTurnOnAction"
+                    android:text="@string/test_on_with_action" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/intent_action_turnoff"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="onClickTurnOffAction"
+                    android:text="@string/test_off_with_action" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/toggle_hotspot_with_data"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="To turn ON, send and Intent with data. This effectively opens a custom link:"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/linkon_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="12dp"
+                    android:focusable="true"
+                    android:linksClickable="true"
+                    android:text="@string/on_uri"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="To turn OFF," />
+
+                <TextView
+                    android:id="@+id/linkoff_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="12dp"
+                    android:focusable="true"
+                    android:linksClickable="true"
+                    android:text="@string/off_uri"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>
